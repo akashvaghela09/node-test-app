@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = 3000
 const {style} = require("./style")
 
 app.get('/', (req, res) => {
@@ -27,6 +27,6 @@ app.delete('/app', (req, res) => {
     res.send(`DELETE Request`)
 })
 
-app.listen(port, () => {
-  console.log(`Node running at ${port}`)
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Node running at ${PORT}`)
 })
