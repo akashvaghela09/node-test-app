@@ -1,10 +1,9 @@
 const express = require('express')
 const app = express()
 const PORT = 6060
-const {style} = require("./style")
 
 app.get('/', (req, res) => {
-  res.send(`<div style="${style}">It's a Sample Node App</div>`)
+  res.send(`<div>It's a Sample Node App</div>`)
 })
 
 app.get('/app', (req, res) => {
